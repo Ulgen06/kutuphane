@@ -28,6 +28,9 @@ jobs:
       - name: Install Dependencies
         run: npm install --force
 
+      - name: Fix Expo Package Versions
+        run: npx expo install --fix
+
       - name: Expo Prebuild (Generated Android folder)
         run: npx expo prebuild --platform android --non-interactive
 
